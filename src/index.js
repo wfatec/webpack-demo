@@ -6,14 +6,22 @@ import './index.css'
 console.log('webpack live reload is working')
 
 class App extends React.Component {
-    constructor(props){
-        super(props);
-        this.onClick = this.onClick.bind(this);
-        this.state = {
-            reset: 'yes'
-        }
+    // constructor(props){
+    //     super(props);
+    //     this.onClick = this.onClick.bind(this);
+    //     this.state = {
+    //         reset: 'yes'
+    //     }
+    // }
+    // onClick () {
+    //     this.setState({
+    //         reset: this.state.reset === 'yes' ? 'no' : 'yes'
+    //     })
+    // }
+    state = {
+        reset: 'yes'
     }
-    onClick () {
+    onClick = () => {
         this.setState({
             reset: this.state.reset === 'yes' ? 'no' : 'yes'
         })
